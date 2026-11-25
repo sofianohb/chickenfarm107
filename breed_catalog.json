@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "target": "@chicken.farm107",
+  "target_daily": 2,
+  "editorial_rules": {
+    "real_camera_only": true,
+    "text_overlay": false,
+    "natural_recorded_audio": true,
+    "prefer_native_vertical": true,
+    "attribution_in_caption": true,
+    "verify_breed_and_color": true,
+    "never_reuse_identical_clip": true,
+    "never_label_unverified_breed": true,
+    "check_share_alike_and_platform_terms": true,
+    "publication_requires_review": true
+  },
+  "breeds": [
+    {
+      "name": "Brahma",
+      "group": "priority",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Sussex",
+      "group": "priority",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Australorp",
+      "group": "priority",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Silkie",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Cochin",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Polish",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Serama",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Sebright",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Dutch Bantam",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Japanese Bantam",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Belgian d'Uccle",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Belgian d'Anvers",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Pekin Bantam",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Sultan",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Houdan",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Crèvecœur",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "La Flèche",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Frizzle",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Phoenix",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Yokohama",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Onagadori",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Pavlovskaya",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Appenzeller Spitzhauben",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Hamburg",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Sumatra",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Ayam Cemani",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Svart Hona",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Naked Neck",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Araucana",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Ameraucana",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Faverolles",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Modern Game",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Old English Game",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Shamo",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Aseel",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Chabo",
+      "group": "ornamental",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Orpington",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Wyandotte",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Plymouth Rock",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Rhode Island Red",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Rhode Island White",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "New Hampshire",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Marans",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Barnevelder",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Welsummer",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Delaware",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Dorking",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Dominique",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Buckeye",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Jersey Giant",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Bielefelder",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Mechelse Koekoek",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Langshan",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Java",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Chantecler",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Scots Dumpy",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Scots Grey",
+      "group": "dual_purpose",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Leghorn",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Ancona",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Minorca",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Andalusian",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Campine",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Lakenvelder",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Egyptian Fayoumi",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Spanish White-Faced Black",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Holland",
+      "group": "egg_layers",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Algerian local chickens",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Moroccan local chickens",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Tunisian local chickens",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Baladi",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Kadaknath",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Dong Tao",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "H'mong chicken",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Icelandic chicken",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Swedish Flower Hen",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Norwegian Jaerhon",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Bresse Gauloise",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    },
+    {
+      "name": "Millefleur de Tournaisis",
+      "group": "regional",
+      "status": "needs_verified_footage"
+    }
+  ],
+  "sources": [
+    {
+      "breed": "Australorp",
+      "stage": "chicks",
+      "page": "https://commons.wikimedia.org/wiki/File:Australorp_Chicks_Dust_Bathing,_Background_Australian_Magpie_Calls.webm",
+      "author": "100percent ballerina",
+      "license": "CC BY-SA 4.0",
+      "sha1": "b81bdeb0e92f96b1f18041ed59332f3465ca3c22",
+      "native_vertical": true,
+      "original_audio": "background Australian magpie calls",
+      "status": "source_verified; download and platform license compatibility pending"
+    },
+    {
+      "breed": "Brahma",
+      "page": "https://commons.wikimedia.org/wiki/Category:Brahma_(chicken)",
+      "status": "search leads only; individual footage and rights not verified"
+    },
+    {
+      "breed": "Sussex",
+      "page": "https://commons.wikimedia.org/wiki/Category:Sussex_(chicken)",
+      "status": "search leads only; individual footage and rights not verified"
+    }
+  ],
+  "rotation": "Prioritize underrepresented verified breeds, alternate breed groups, track clip SHA256 and source ID, avoid repeated footage, skip missing sources rather than mislabel. Local populations and feather traits are not necessarily standardized breeds."
+}
