@@ -13,6 +13,13 @@ jobs:
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
+      - name: Check credential configuration without exposing values
+        env:
+          SECRET_PRESENT: ${{ secrets.BUFFER_API_KEY != '' }}
+          VARIABLE_PRESENT: ${{ vars.BUFFER_API_KEY != '' }}
+        run: |
+          printf 'Repository secret available: %s\n' "$SECRET_PRESENT"
+          printf 'Same-name configuration variable exists: %s\n' "$VARIABLE_PRESENT"
       - name: Verify only ChickenFarm channel
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
