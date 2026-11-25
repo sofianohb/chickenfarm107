@@ -22,7 +22,7 @@ jobs:
         run: python3 produce_clean.py
       - uses: actions/upload-artifact@v4
         with:
-          name: ChickenFarm-clean-real-audio
+          name: ChickenFarm-fullscreen-9x16
           path: output/
           if-no-files-found: error
           retention-days: 7
