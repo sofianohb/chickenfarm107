@@ -1,6 +1,10 @@
 name: Verify Buffer connection
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-buffer.yml'
 permissions:
   contents: read
 jobs:
