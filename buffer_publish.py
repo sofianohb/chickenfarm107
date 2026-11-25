@@ -33,7 +33,7 @@ def ensure_unique(oid,cid,caption,due):
         after=new
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("--id",required=True,choices=["silkie","rooster"])
+    p.add_argument("--id",required=True,choices=["silkie", "rooster", "australorp_chicks", "hen_chicks"])
     p.add_argument("--url",required=True)
     p.add_argument("--due",required=True)
     p.add_argument("--reviewed",action="store_true")
