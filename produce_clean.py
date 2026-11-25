@@ -23,8 +23,9 @@ def produce(s):
     meta=probe(src);v=next(x for x in meta["streams"] if x["codec_type"]=="video")
     d=s["duration"];assert float(meta["format"]["duration"])>=d
     target=out/(s["id"]+".mp4")
-    # Full image preserved over a softly blurred copy, no titles or graphic overlays.
-    vf="[0:v]split=2[bg][fg];[bg]scale=360:640:force_original_aspect_ratio=increase,crop=360:640,boxblur=20:3,scale=1080:1920[back];[fg]scale=1080:1920:force_original_aspect_ratio=decrease:force_divisible_by=2[front];[back][front]overlay=(W-w)/2:(H-h)/2,setsar=1,fps=30[v]"
+    # Full-screen 9:16 crop; preserve aspect ratio, no padding, no blur or overlays.
+    # Review head/body framing at start/middle/end; reject clips that cut the bird.
+    vf="[0:v]scale=1080:1920:force_original_aspect_ratio=increase:force_divisible_by=2,crop=1080:1920,setsar=1,fps=30[v]"
     af=f"volume=0.8,afade=t=in:st=0:d=0.25,afade=t=out:st={d-0.5}:d=0.5"
     subprocess.run(["ffmpeg","-nostdin","-y","-i",str(src),"-stream_loop","-1","-i",str(audio),"-filter_complex_threads","2","-filter_complex",vf,"-map","[v]","-map","1:a:0","-t",str(d),"-af",af,"-c:v","libx264","-threads","4","-preset","fast","-crf","19","-pix_fmt","yuv420p","-c:a","aac","-b:a","160k","-ar","48000","-movflags","+faststart",str(target)],cwd=ROOT,check=True)
     result=probe(target);vs=next(x for x in result["streams"] if x["codec_type"]=="video")
@@ -37,7 +38,7 @@ def produce(s):
     apage="https://commons.wikimedia.org/wiki/File:"+urllib.parse.quote(name)
     caption=f'{s["title"]} 🐓\n{s["question"]}\nتصوير: {s["author"]} | {s["license"]} | {s["license_url"]}\n{page}\nصوت دواجن حقيقي مضاف من تسجيل منفصل: alys (Public domain) {apage}\nتم تنسيق الصورة وإضافة تسجيل صوتي منفصل.\n#دواجن_الزينة #دجاج #ChickenFarm'
     (out/(s["id"]+".txt")).write_text(caption,encoding="utf8")
-    (out/(s["id"]+".json")).write_text(json.dumps(dict(source=s,source_url=url,source_page=page,audio_page=apage,audio_sha256=hashlib.sha256(audio.read_bytes()).hexdigest(),audio_license="Public domain",audio_author="alys",audio_is_separate_recording=True,mean_volume_db=mean,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),technical_QA="passed",visual_and_audio_review="required before publishing",original_width=v["width"],original_height=v["height"],text_overlay=False),ensure_ascii=False,indent=2),encoding="utf8")
+    (out/(s["id"]+".json")).write_text(json.dumps(dict(source=s,source_url=url,source_page=page,audio_page=apage,audio_sha256=hashlib.sha256(audio.read_bytes()).hexdigest(),audio_license="Public domain",audio_author="alys",audio_is_separate_recording=True,mean_volume_db=mean,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),technical_QA="passed",visual_and_audio_review="required before publishing",original_width=v["width"],original_height=v["height"],text_overlay=False,framing='full_screen_9_16_center_crop',visual_framing_review='reject if bird is cut; prefer native vertical footage'),ensure_ascii=False,indent=2),encoding="utf8")
     for label,sec in [("start",1),("middle",d//2),("end",d-1)]:
         run("ffmpeg","-v","error","-y","-ss",str(sec),"-i",str(target),"-frames:v","1",str(out/(s["id"]+"_"+label+".jpg")))
     print("QA passed",target,"mean_volume",mean,flush=True)
