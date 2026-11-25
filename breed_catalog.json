@@ -1,7 +1,7 @@
 {
   "version": 1,
   "target": "@chicken.farm107",
-  "target_daily": 2,
+  "target_daily": 4,
   "editorial_rules": {
     "real_camera_only": true,
     "text_overlay": false,
