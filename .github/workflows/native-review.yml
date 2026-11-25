@@ -1,0 +1,29 @@
+name: Native portrait review
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/native-review.yml'
+permissions:
+  contents: read
+concurrency:
+  group: chickenfarm-native-review
+  cancel-in-progress: false
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Native 9:16 review candidates
+        run: python3 produce_native.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ChickenFarm-native-review
+          path: output/
+          if-no-files-found: error
+          retention-days: 7
